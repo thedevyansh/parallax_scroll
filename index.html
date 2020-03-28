@@ -8,11 +8,14 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
 
-	<link href="https://fonts.googleapis.com/css?family=Cormorant&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+	<script src="https://use.fontawesome.com/55fc7e5b7b.js"></script>
 
 	<style>
 
 		html, body {
+			scroll-behavior: smooth;
 			margin: 0;
 			height: 100%;
 		}
@@ -120,22 +123,44 @@
 			min-height: 170px;
 			padding: 10px;
 			background-color: #383838;
-			font-family: 'Cormorant', serif;
+			font-family: 'Quicksand', sans-serif;
 			color: white;
 		}
 
 		.break h3 {
 			text-align: center;
+			color: yellow;
 		}
 
 		.break p {
 			text-align: center;
 		}
 
-		@media only screen and (max-width: 575px) {
+		#bottomtop {
+      
+           display: none;
+           padding: 10px;
+           border-radius: 100%;
+           background-color: black;
+           opacity: 0.7;
+           font-size: 20px;
+           position: fixed;
+           top: 550px;
+           right: 20px;
+           color: white;
+           z-index: 300;
+        }
+    
+		@media only screen and (max-width: 576px) {
 			.break p {
 			text-align: justify;
 		}}
+
+		@media only screen and (min-width: 576px) {
+			.break h3{
+				margin-top: 30px;
+			}
+		}
 
 		.pulse-loader {
 			display: block;
@@ -184,7 +209,10 @@
 
 <body>
 
-	<div class="div1">
+	<a href="#div1"><i id="bottomtop" class="fa fa-arrow-up" aria-hidden="true"></i>
+	</a>
+
+	<div id = "div1" class="div1">
 
 		<div>
 			<img src="icon.png" height="30" width="30">
@@ -335,6 +363,23 @@
 		</div>
 
 	</div>
+
+	<script>
+
+      let myButton= document.getElementById('bottomtop');
+      window.onscroll = scrolling;
+      function scrolling() {
+
+      if(document.documentElement.scrollTop > 500 || document.body.scrollTop > 500){
+      myButton.style.display = "block";
+      }
+
+      else {
+      myButton.style.display = "none";
+      }
+    }
+  
+</script>
 
 </body>
 </html>
