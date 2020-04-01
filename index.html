@@ -27,8 +27,8 @@
 		}
 
 		.div1 {
-			background-image: url('harry.png');
-			
+			background-image: url('0.jpg');
+			opacity: 0.5;
 		}
 
 		.div2 {
@@ -183,10 +183,28 @@
 		}
 
     
-		@media only screen and (max-width: 576px) {
+		@media only screen and (max-width: 500px) {
 			.break p {
 			text-align: justify;
-		}}
+		}
+
+		    .div1 {
+			background-image: url('harry.png');
+			opacity: 0.9;
+		}
+
+		    .div1 div:nth-child(2) {
+		    	top: 92%;
+		    }
+
+		    .div1 span {
+		    	background-color: transparent;
+		    	color: white;
+		    	text-transform: uppercase;
+		    }
+
+
+	}
 
 		@media only screen and (min-width: 576px) {
 			.break h3{
